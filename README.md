@@ -1,2 +1,2 @@
 # KevBayliss.github.io
-My KevBayliss Repository
+My Kev Bayliss Art Repository - used for my KevBayliss.Com site
