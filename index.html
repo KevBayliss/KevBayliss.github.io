@@ -5,79 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kev Bayliss Art</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            max-width: 1200px; /* Limit the width */
-            margin-left: auto;
-            margin-right: auto;
-        }
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    max-width: 1200px; /* Limit the width */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #000; /* Border around the hero image */
+    position: relative;
+}
+
+.hero {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid #000; /* Black border around the hero image */
+    background: #f7f7f7;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't stretch */
+    height: auto;
+    display: block;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000; /* Black footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+    border-top: 1px solid #000; /* To match the border of the hero section */
+}
+
+footer p {
+    margin: 0;
+}
+
 .icon {
     width: 50px; /* Adjust the size as needed */
     height: 50px; /* Adjust the size as needed */
 }
-
-        header {
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .banner {
-            width: 100%;
-            max-width: 1200px; /* Ensure the banner doesn't stretch beyond this width */
-            height: auto;
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .button {
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px 5px;
-        }
-
-        .button-red {
-            background-color: #e60000; /* Red for email */
-        }
-
-        .button-green {
-            background-color: #00cc00; /* Green for eBay */
-        }
-
-        .button-blue {
-            background-color: #007bff; /* Blue for Twitch */
-        }
-
-        .social-icons a {
-            color: #000;
-            font-size: 24px;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-
-        .social-icons {
-            text-align: center;
-            padding-top: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
 
         /*image*/
         .profile-img {
