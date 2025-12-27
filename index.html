@@ -47,12 +47,6 @@
     margin: 10px 5px;
 }
 
-.icon {
-    width: 30px; /* Size of the icon */
-    height: 30px; /* Size of the icon */
-    margin-right: 16px; /* Space between icon and text */
-    filter: invert(1); /* Inverts the icon color to match text color */
-}
 
 /* Button color classes */
 .button-red {
@@ -72,19 +66,27 @@
     transform: translateY(-1px);
 }
 
+/* Social media icons styling */
+.social-icons a {
+    color: #000;
+    font-size: 24px; /* Reduce size for social media icons */
+    margin: 0 15px;
+    text-decoration: none;
+}
 
+.social-icons img {
+    width: 30px; /* Set a specific size for social media icons */
+    height: 30px; /* Maintain the aspect ratio */
+}
 
-        .social-icons a {
-            color: #000;
-            font-size: 20px;
-            margin: 0 15px;
-            text-decoration: none;
-        }
+/* Other icon size for the buttons should remain as previously set */
+.icon {
+    width: 30px; /* Icon size for buttons */
+    height: 30px;
+    margin-right: 16px; /* Space between icon and text */
+    filter: invert(1); /* Inverts the icon color to match text color */
+}
 
-        .social-icons {
-            text-align: center;
-            padding-top: 20px;
-        }
 
         footer {
             text-align: center;
