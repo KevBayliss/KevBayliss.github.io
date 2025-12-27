@@ -18,9 +18,10 @@
 
     * { box-sizing: border-box; }
     html, body { height: 100%; }
+
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.55;
@@ -35,6 +36,7 @@
       padding: 28px 18px 48px;
     }
 
+    /* HERO */
     .hero{
       border-radius: var(--radius);
       overflow: hidden;
@@ -47,6 +49,7 @@
       display: block;
     }
 
+    /* SECTIONS */
     .section{
       padding: 22px 4px;
       border-bottom: 1px solid var(--rule);
@@ -66,55 +69,65 @@
     p{ margin: 0 0 12px 0; color: var(--muted); }
     .lead{ color: var(--text); }
 
-    .email{
-      font-weight: 700;
-      font-size: 18px;
-      display: inline-block;
-      padding: 10px 14px;
-      border: 1px solid var(--rule);
-      border-radius: 999px;
-      background: #fff;
-    }
-    .email:hover{ text-decoration: none; border-color: #cfcfcf; }
-
-    .cta{
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid var(--rule);
-      border-radius: 999px;
-      background: #fff;
-      font-weight: 600;
-    }
-    .cta:hover{ text-decoration: none; border-color: #cfcfcf; }
-
-    .icons{
+    /* BUTTONS */
+    .btn-row{
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
+      gap: 12px;
+      margin-top: 10px;
     }
-    .icon-btn{
+
+    .btn{
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover{
+      opacity: 0.9;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    /* RGB brand colours */
+    .btn-red{ background: rgb(255, 0, 0); }
+    .btn-blue{ background: rgb(0, 0, 255); }
+
+    /* ICON SOCIALS */
+    .icons{
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .icon-btn{
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border: 1px solid var(--rule);
       border-radius: 999px;
       background: #fff;
-      font-weight: 600;
+      transition: transform 0.1s ease, border-color 0.1s ease;
     }
-    .icon-btn:hover{ text-decoration: none; border-color:#cfcfcf; }
+
+    .icon-btn:hover{
+      transform: translateY(-1px);
+      border-color: #cfcfcf;
+      text-decoration: none;
+    }
+
     .icon{
-      width: 18px;
-      height: 18px;
-      display: inline-block;
-    }
-    .small{
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 6px;
+      width: 20px;
+      height: 20px;
     }
 
     footer{
@@ -130,117 +143,56 @@
 <body>
   <main class="wrap">
 
-    <!-- 1) HERO / BANNER -->
-    <section class="hero" aria-label="Banner">
-      <!-- Put your banner image in the repo (same folder as index.html) and name it accordingly -->
-      <img src="KevBayliss.github.io
-/KevBaylissArt_Banner_1920.png" alt="Kev Bayliss Art banner" />
+    <!-- HERO / BANNER -->
+    <section class="hero">
+      <img src="/KevBaylissArt_Banner_1920.png" alt="Kev Bayliss Art banner" />
     </section>
 
-    <!-- 2) SHORT BIO -->
-    <section class="section" id="about">
+    <!-- BIO -->
+    <section class="section">
       <h1>Kev Bayliss — Artist &amp; Game Creator</h1>
 
       <p class="lead">
-        I’m a British artist and game creator with a career spanning traditional painting, character design,
-        and video game development. I began my professional journey in the late 1980s, contributing to some
-        of the most recognisable games of the 16-bit and early 3D era, and I continue to create new work today.
+        I’m a British artist and game creator with a career spanning traditional painting,
+        character design, and video game development. I began my professional journey in
+        the late 1980s, contributing to some of the most recognisable games of the 16-bit
+        and early 3D era, and I continue to create new work today.
       </p>
 
       <p>
-        My current focus is original paintings, game-inspired artwork, and commissioned pieces, blending
-        hand-painted techniques with decades of experience in digital art and character creation.
+        My current focus is original paintings, game-inspired artwork, and commissioned pieces,
+        blending hand-painted techniques with decades of experience in digital art and character creation.
       </p>
 
       <p>
-        I regularly paint live on Twitch, sharing my process, techniques, and stories from a lifetime in game development.
+        I regularly paint live on Twitch, sharing my process, techniques, and stories from a lifetime
+        in game development.
       </p>
     </section>
 
-    <!-- 3) COMMISSIONS & ENQUIRIES -->
-    <section class="section" id="commissions">
+    <!-- COMMISSIONS -->
+    <section class="section">
       <h2>Commissions &amp; Enquiries</h2>
 
       <p>
-        I’m available for a limited number of commissions, including original paintings and bespoke artwork
-        inspired by games, characters, and creative themes.
+        I’m available for a limited number of commissions, including original paintings
+        and bespoke artwork inspired by games, characters, and creative themes.
       </p>
 
-      <p>If you’d like to discuss an idea, please get in touch by email:</p>
-
-      <p>
-        <a class="email" href="mailto:KevBaylissArt@Outlook.com">KevBaylissArt@Outlook.com</a>
-      </p>
+      <div class="btn-row">
+        <a class="btn btn-red" href="mailto:KevBaylissArt@Outlook.com">
+          Email me about commissions
+        </a>
+      </div>
     </section>
 
-    <!-- 4) AVAILABLE WORKS (eBay) -->
-    <section class="section" id="available-works">
+    <!-- EBAY -->
+    <section class="section">
       <h2>Available Works</h2>
 
       <p>
         A selection of original, one-of-a-kind artworks is available to purchase via my eBay page.
       </p>
 
-      <!-- Replace with your actual eBay URL -->
-      <p>
-        <a class="cta" href="https://www.ebay.co.uk/usr/YOUR_EBAY_USERNAME" target="_blank" rel="noopener noreferrer">
-          View available works on eBay
-          <span aria-hidden="true">↗</span>
-        </a>
-      </p>
-
-      <p class="small">Tip: Keep “Available works” wording (calm, not salesy) — it fits your site tone.</p>
-    </section>
-
-    <!-- 5) SOCIAL LINKS WITH ICONS -->
-    <section class="section" id="socials">
-      <h2>Elsewhere online</h2>
-
-      <div class="icons">
-        <!-- Twitch -->
-        <a class="icon-btn" href="https://twitch.tv/YOUR_CHANNEL" target="_blank" rel="noopener noreferrer">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M4 3h18v12l-5 5h-5l-3 3H6v-3H4V3zm2 2v14h3v2l2-2h6l4-4V5H6zm10 3h2v6h-2V8zm-5 0h2v6h-2V8z"/>
-          </svg>
-          Twitch
-        </a>
-
-        <!-- Instagram -->
-        <a class="icon-btn" href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6zm5.5-.8a1.1 1.1 0 1 1-2.2 0a1.1 1.1 0 0 1 2.2 0z"/>
-          </svg>
-          Instagram
-        </a>
-
-        <!-- X / Twitter -->
-        <a class="icon-btn" href="https://x.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23 22h-6.7l-5.2-6.7L5.3 22H2l7.3-8.4L1.6 2H8.5l4.7 6.1L18.9 2zm-1.2 18h1.8L7.4 4H5.5l12.2 16z"/>
-          </svg>
-          X (Twitter)
-        </a>
-
-        <!-- LinkedIn (optional) -->
-        <a class="icon-btn" href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener noreferrer">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M4 3a2 2 0 1 1 0 4a2 2 0 0 1 0-4zm-1 6h3v12H3V9zm7 0h3v2c.5-1.1 2-2.3 4.1-2.3C20.4 8.7 22 10.4 22 14v7h-3v-6.3c0-2.1-.7-3.5-2.5-3.5c-1.4 0-2.2.9-2.6 1.8c-.1.3-.1.7-.1 1.1V21h-3V9z"/>
-          </svg>
-          LinkedIn
-        </a>
-      </div>
-
-      <p class="small">If you prefer icons only, remove the text labels (“Twitch”, “Instagram”, etc.).</p>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Kev Bayliss. All rights reserved.
-    </footer>
-
-  </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+      <div class="btn-row">
+        <a class="btn btn-blue"
