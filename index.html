@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +14,9 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         header {
-           /* background-color: #000;*/
+            background-color: #000;
             padding:30px;
             text-align: center;
             color: #fff;
@@ -33,72 +32,106 @@
             padding: 20px;
             text-align: center;
         }
-        
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             background-color: #000;
             color: #fff;
         }
 
+        .button {
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center; /* Aligns the text and icon vertically */
+            font-size: 16px;
+            margin: 10px 5px;
+        }
 
-.button {
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center; /* Aligns the text and icon vertically */
-    font-size: 16px;
-    margin: 10px 5px;
-}
+        /* Button color classes */
+        .button-red {
+            background-color: #e60000; /* Red for email */
+        }
 
+        .button-green {
+            background-color: #00cc00; /* Green for eBay */
+        }
 
-/* Button color classes */
-.button-red {
-    background-color: #e60000; /* Red for email */
-}
+        .button-blue {
+            background-color: #007bff; /* Blue for Twitch */
+        }
 
-.button-green {
-    background-color: #00cc00; /* Green for eBay */
-}
+        .button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
 
-.button-blue {
-    background-color: #007bff; /* Blue for Twitch */
-}
+        /* Social media icons styling */
+        .social-icons a {
+            color: #000;
+            font-size: 36px; /* Reduce size for social media icons */
+            margin: 0 15px;
+            text-decoration: none;
+        }
 
-.button:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
+        .social-icons img {
+            width: 90px; /* Set a specific size for social media icons */
+            height: 90px; /* Maintain the aspect ratio */
+        }
 
-/* Social media icons styling */
-.social-icons a {
-    color: #000;
-    font-size: 36px; /* Reduce size for social media icons */
-    margin: 0 15px;
-    text-decoration: none;
-}
+        /* Other icon size for the buttons should remain as previously set */
+        .icon {
+            width: 30px; /* Icon size for buttons */
+            height: 30px;
+            margin-right: 16px; /* Space between icon and text */
+            filter: invert(1); /* Inverts the icon color to match text color */
+        }
 
-.social-icons img {
-    width: 90px; /* Set a specific size for social media icons */
-    height: 90px; /* Maintain the aspect ratio */
-}
+        /* Profile Image and Title Layout */
+        .header-container {
+            display: flex; /* Use Flexbox */
+            align-items: center; /* Vertically align items */
+            justify-content: flex-start; /* Align to the left */
+            margin-bottom: 20px; /* Space between the image and the text */
+        }
 
-/* Other icon size for the buttons should remain as previously set */
-.icon {
-    width: 30px; /* Icon size for buttons */
-    height: 30px;
-    margin-right: 16px; /* Space between icon and text */
-    filter: invert(1); /* Inverts the icon color to match text color */
-}
+        /* Profile Image */
+        .profile-img {
+            width: 80px; /* Adjust the size of the profile picture */
+            height: 80px; /* Keep the height same as width */
+            border-radius: 50%; /* Make it circular */
+            margin-right: 20px; /* Space between the image and the title */
+        }
+
+        /* Title */
+        h1 {
+            font-size: 24px; /* Adjust the size as needed */
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column; /* Stack the profile image and text vertically */
+                align-items: center; /* Center the items */
+            }
+
+            .profile-img {
+                margin-bottom: 15px; /* Add space between the image and text */
+            }
+
+            h1 {
+                text-align: center; /* Center the title */
+            }
+        }
 
         /*image*/
         .profile-img {
-            width: 110px;
-            height: 110px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 3px solid white;
             margin-right: 20px;
@@ -114,99 +147,29 @@
         .about-me-text {
             max-width: 600px;
         }
-
     </style>
 </head>
 <body>
 
 <header>
-    <img class="banner" src="KevBayliss.github.io
-/KevBaylissArt_Banner_1200.jpg" alt="Kev Bayliss Art">
+    <img class="banner" src="KevBayliss.github.io/KevBaylissArt_Banner_1200.jpg" alt="Kev Bayliss Art">
 </header>
 
-    
 <section>
-    
     <!-- Email Button with Custom Icon -->
     <a href="mailto:KevBaylissArt@Outlook.com" class="button button-red">
-        <img src="KevBayliss.github.io
-/mail icon.png" alt="Email" class="icon"> <strong>EMAIL ME FOR COMMISSIONS</strong>
+        <img src="KevBayliss.github.io/mail icon.png" alt="Email" class="icon"> <strong>EMAIL ME FOR COMMISSIONS</strong>
     </a>
 
     <!-- eBay Button with Custom Icon -->
-    <a href="https://www.ebay.co.uk/usr/Kev_Bayliss_Art" class="button button-green">
-        <img src="KevBayliss.github.io
-/ebay icon.png" alt="eBay" class="icon"> <strong>SHOP EXISTING WORK ON EBAY</strong>
+    <a href="https://www.ebay.co.uk/usr/KevBaylissArt" class="button button-green">
+        <img src="KevBayliss.github.io/ebay icon.png" alt="eBay" class="icon"> <strong>SHOP EXISTING WORK ON EBAY</strong>
     </a>
 
     <!-- Twitch Button with Custom Icon -->
-    <a href="https://www.twitch.tv/Kev_Bayliss" class="button button-blue">
-        <img src="KevBayliss.github.io
-/twitch icon.png
-" alt="Twitch" class="icon"><strong>WATCH MY TWITCH CHANNEL</strong>
+    <a href="https://www.twitch.tv/KevBaylissArt" class="button button-blue">
+        <img src="KevBayliss.github.io/twitch icon.png" alt="Twitch" class="icon"><strong>WATCH MY TWITCH CHANNEL</strong>
     </a>
-    
 </section>
 
-
-<section class="section">
-  <h1>Kev Bayliss — Artist & Game Creator</h1>
-
-  <div class="about-me">
-    <img class="profile-img" src="KevBayliss.github.io
-/KevBaylissArt_ProfilePic_256.jpg" alt="Kev Bayliss Profile Picture">
-    <div class="about-me-text">
-      <p class="lead">
-        I’m a British artist and game creator with a career spanning almost 40 years in the video game industry beginning my journey in the late 1980s at Rare Ltd.
-      </p>
-
-<p>
-    Here I had the opportunity to redesign <strong>Donkey Kong</strong>, and I’m proud that he has remained an iconic figure ever since. Alongside this, I created <strong>Diddy Kong</strong> for Nintendo and also the characters from <strong>Killer Instinct</strong> and <strong>Battletoads</strong>.
-</p>
-
-      <p>
-        Throughout my career, I’ve worked on a variety of titles, contributing to the visuals that defined a generation of gamers. My work helped shape the golden era of gaming, and I've had the pleasure of collaborating with some of the most talented minds in the industry.
-      </p>
-
-      <p>
-        Today, I continue to create and share my passion for art. My focus is on original paintings, digital artwork, and commissioned pieces. Whether I'm working on a new commission or painting live on Twitch, I’m always eager to share my creative process and stories behind the characters and worlds I’ve helped bring to life.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-
-<section>
-  <h2>Follow Me on Social Media</h2>
-  <div class="social-icons">
-    <!-- Twitter Icon -->
-    <a href="https://x.com/Kev_Bayliss" target="_blank" class="icon-btn">
-      <img src="KevBayliss.github.io
-/x logo.png" alt="Twitter" class="social-icons">
-    </a>
-    <!-- Instagram Icon -->
-    <a href="https://www.instagram.com/Kev_Bayliss" target="_blank" class="icon-btn">
-      <img src="KevBayliss.github.io
-/insta logo.png" alt="Instagram" class="social-icons">
-    </a>
-    <!-- LinkedIn Icon -->
-    <a href="https://www.linkedin.com/in/kevbayliss/" target="_blank" class="icon-btn">
-      <img src="KevBayliss.github.io
-/linked in logo.png" alt="LinkedIn" class="social-icons">
-    </a>
-    <!-- BlueSky Icon -->
-    <a href="https://bsky.app/profile/kevbayliss.bsky.social" target="_blank" class="icon-btn">
-      <img src="KevBayliss.github.io
-/BlueSky Logo.png" alt="BlueSky" class="social-icons">
-    </a>
-  </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 Kev Bayliss Art. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+<section class
