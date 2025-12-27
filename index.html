@@ -38,28 +38,44 @@
             text-align: center;
         }
 
-        .button {
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px 5px;
-        }
+.button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center; /* Aligns the text and icon vertically */
+    font-size: 16px;
+    margin: 10px 5px;
+}
 
-        .button-red {
-            background-color: #e60000; /* Red for email */
-        }
+.icon {
+    width: 20px; /* Size of the icon */
+    height: 20px; /* Size of the icon */
+    margin-right: 10px; /* Space between icon and text */
+    filter: invert(1); /* Inverts the icon color to match text color */
+}
 
-        .button-green {
-            background-color: #00cc00; /* Green for eBay */
-        }
+/* Button color classes */
+.button-red {
+    background-color: #e60000; /* Red for email */
+}
 
-        .button-blue {
-            background-color: #007bff; /* Blue for Twitch */
-        }
+.button-green {
+    background-color: #00cc00; /* Green for eBay */
+}
+
+.button-blue {
+    background-color: #007bff; /* Blue for Twitch */
+}
+
+.button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
 
         .social-icons a {
             color: #000;
@@ -113,10 +129,22 @@
     <h1>Welcome to Kev Bayliss Art</h1>
     <p>Explore my art, commissions, and more.</p>
 
-    <a href="mailto:KevBaylissArt@Outlook.com" class="button button-red">Email for Commissions</a>
-    <a href="https://www.ebay.co.uk/usr/Kev_Bayliss_Art" class="button button-green">View Existing Works on eBay</a>
-    <a href="https://www.twitch.tv/Kev_Bayliss" class="button button-blue">Watch Me Paint / Play LIVE on Twitch</a>
+    <!-- Email Button with Custom Icon -->
+    <a href="mailto:KevBaylissArt@Outlook.com" class="button button-red">
+        <img src="/images/icons/email-icon.png" alt="Email" class="icon"> Email for Commissions
+    </a>
+
+    <!-- eBay Button with Custom Icon -->
+    <a href="https://www.ebay.co.uk/usr/KevBaylissArt" class="button button-green">
+        <img src="/images/icons/ebay-icon.png" alt="eBay" class="icon"> View Existing Works on eBay
+    </a>
+
+    <!-- Twitch Button with Custom Icon -->
+    <a href="https://www.twitch.tv/KevBaylissArt" class="button button-blue">
+        <img src="/images/icons/twitch-icon.png" alt="Twitch" class="icon"> Watch Me Paint / Play LIVE on Twitch
+    </a>
 </section>
+
 
 <section class="section">
   <h1>Kev Bayliss — Artist & Game Creator</h1>
