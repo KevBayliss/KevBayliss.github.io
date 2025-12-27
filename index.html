@@ -5,74 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kev Bayliss Art</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            max-width: 1200px; /* Limit the width */
-            margin-left: auto;
-            margin-right: auto;
+        :root{
+            --bg:#ffffff;
+            --text:#111111;
+            --muted:#444444;
+            --rule:#e6e6e6;
+            --max:980px;
+            --radius:18px;
         }
 
-        header {
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+
+        body{
+            margin:0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.55;
         }
 
-        .banner {
+        a{ color: inherit; text-decoration: none; }
+        a:hover{ text-decoration: underline; }
+
+        .wrap{
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 28px 18px 48px;
+        }
+
+        /* HERO */
+        .hero{
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--rule);
+            background: #f7f7f7;
+        }
+        .hero img{
             width: 100%;
-            max-width: 1200px; /* Ensure the banner doesn't stretch beyond this width */
             height: auto;
+            display: block;
         }
 
-        section {
-            padding: 20px;
-            text-align: center;
+        /* SECTIONS */
+        .section{
+            padding: 22px 4px;
+            border-bottom: 1px solid var(--rule);
+        }
+        .section:last-of-type{ border-bottom: none; }
+
+        h1{
+            font-size: clamp(26px, 3vw, 34px);
+            margin: 0 0 10px 0;
+            letter-spacing: -0.02em;
+        }
+        h2{
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.01em;
+        }
+        p{ margin: 0 0 12px 0; color: var(--muted); }
+        .lead{ color: var(--text); }
+
+        /* BUTTONS */
+        .btn-row{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
         }
 
-        .button {
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+        .btn{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            color: #ffffff;
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px 5px;
+            transition: transform 0.1s ease, opacity 0.1s ease;
+            white-space: nowrap;
         }
 
-        .button-red {
-            background-color: #e60000; /* Red for email */
-        }
-
-        .button-green {
-            background-color: #00cc00; /* Green for eBay */
-        }
-
-        .button-blue {
-            background-color: #007bff; /* Blue for Twitch */
-        }
-
-        .social-icons a {
-            color: #000;
-            font-size: 24px;
-            margin: 0 15px;
+        .btn:hover{
+            opacity: 0.9;
+            transform: translateY(-1px);
             text-decoration: none;
         }
 
-        .social-icons {
-            text-align: center;
-            padding-top: 20px;
+        /* RGB brand colours */
+        .btn-red{ background: rgb(255, 0, 0); }
+        .btn-blue{ background: rgb(0, 0, 255); }
+
+        /* ICON SOCIALS */
+        .icons{
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
+        .icon-btn{
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--rule);
+            border-radius: 999px;
+            background: #fff;
+            transition: transform 0.1s ease, border-color 0.1s ease;
+        }
+
+        .icon-btn:hover{
+            transform: translateY(-1px);
+            border-color: #cfcfcf;
+            text-decoration: none;
+        }
+
+        .icon{
+            width: 20px;
+            height: 20px;
+        }
+
+        footer{
+            margin-top: 26px;
+            padding-top: 18px;
+            border-top: 1px solid var(--rule);
+            color: var(--muted);
+            font-size: 13px;
         }
 
         /* Profile image */
@@ -98,36 +159,93 @@
     </style>
 </head>
 <body>
+  <main class="wrap">
 
-<header>
-    <img class="banner" src="/KevBaylissArt_Banner_1920.png" alt="Kev Bayliss Art">
-</header>
+    <!-- HERO / BANNER -->
+    <section class="hero">
+      <img src="/KevBaylissArt_Banner_1920.png" alt="Kev Bayliss Art banner" />
+    </section>
 
-<section>
-    <h1>Welcome to Kev Bayliss Art</h1>
-    <p>Explore my art, commissions, and more.</p>
+    <!-- BIO -->
+    <section class="section">
+      <h1>Kev Bayliss — Artist &amp; Game Creator</h1>
 
-    <a href="mailto:KevBaylissArt@Outlook.com" class="button button-red">Email for Commissions</a>
-    <a href="https://www.ebay.co.uk/usr/kev_bayliss_art" class="button button-green">View Existing Works on eBay</a>
-    <a href="https://www.twitch.tv/kev_bayliss" class="button button-blue">Watch Me Paint / Play LIVE on Twitch</a>
-</section>
+      <p class="lead">
+        I’m a British artist and game creator with a career spanning traditional painting,
+        character design, and video game development. I began my professional journey in
+        the late 1980s, contributing to some of the most recognisable games of the 16-bit
+        and early 3D era, and I continue to create new work today.
+      </p>
 
-<section class="about-me">
-    <img class="profile-img" src="/your-profile-picture.jpg" alt="Kev Bayliss Profile Picture">
-    <div class="about-me-text">
-        <h2>About Me</h2>
-        <p>I have been an artist in the video game industry since 1987, working on iconic titles and creating characters that have become a part of video game history. I offer commissioned artwork and also sell original works on eBay. Follow my journey on social media and watch me live on Twitch where I create art in real-time.</p>
-    </div>
-</section>
+      <p>
+        My current focus is original paintings, game-inspired artwork, and commissioned pieces,
+        blending hand-painted techniques with decades of experience in digital art and character creation.
+      </p>
 
-<section>
-    <h2>Follow Me on Social Media</h2>
-    <div class="social-icons">
-        <a href="https://x.com/Kev_Bayliss" target="_blank">'X'</a>
-        <a href="https://www.instagram.com/kev_bayliss/" target="_blank">Instagram</a>
-        <a href="https://bsky.app/profile/kevbayliss.bsky.social" target="_blank">BlueSky</a>
-        <a href="https://www.linkedin.com/in/kevbayliss/" target="_blank">LinkedIn</a>
-    </div>
-</section>
+      <p>
+        I regularly paint live on Twitch, sharing my process, techniques, and stories from a lifetime
+        in game development.
+      </p>
+    </section>
 
-<f
+    <!-- COMMISSIONS -->
+    <section class="section">
+      <h2>Commissions &amp; Enquiries</h2>
+
+      <p>
+        I’m available for a limited number of commissions, including original paintings
+        and bespoke artwork inspired by games, characters, and creative themes.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn btn-red" href="mailto:KevBaylissArt@Outlook.com" target="_blank">
+          Email me about commissions
+        </a>
+      </div>
+    </section>
+
+    <!-- EBAY -->
+    <section class="section">
+      <h2>Available Works</h2>
+
+      <p>
+        A selection of original, one-of-a-kind artworks is available to purchase via my eBay page.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn btn-blue" href="https://www.ebay.co.uk/usr/KevBaylissArt" target="_blank">
+          View Existing Works on eBay
+        </a>
+      </div>
+    </section>
+
+    <!-- PROFILE IMAGE & SOCIALS -->
+    <section class="section about-me">
+      <img class="profile-img" src="/your-profile-picture.jpg" alt="Kev Bayliss Profile Picture">
+      <div class="about-me-text">
+        <h2>Follow Me on Social Media</h2>
+        <div class="icons">
+          <a href="https://twitter.com/KevBaylissArt" target="_blank" class="icon-btn">
+            <img src="/path-to-your-twitter-icon.png" alt="Twitter" class="icon" />
+          </a>
+          <a href="https://www.instagram.com/KevBaylissArt" target="_blank" class="icon-btn">
+            <img src="/path-to-your-instagram-icon.png" alt="Instagram" class="icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/KevBaylissArt" target="_blank" class="icon-btn">
+            <img src="/path-to-your-linkedin-icon.png" alt="LinkedIn" class="icon" />
+          </a>
+          <a href="https://www.twitch.tv/KevBaylissArt" target="_blank" class="icon-btn">
+            <img src="/path-to-your-twitch-icon.png" alt="Twitch" class="icon" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Kev Bayliss Art. All rights reserved.</p>
+    </footer>
+
+  </main>
+</body>
+</html>
