@@ -52,10 +52,6 @@
             background-color: #007bff; /* Blue for Twitch */
         }
 
-        .button-twitch {
-            background-color: #9146ff; /* Purple for Twitch */
-        }
-
         .social-icons a {
             color: #000;
             font-size: 24px;
@@ -75,6 +71,26 @@
             color: #fff;
         }
 
+        /* Profile image */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-right: 20px;
+        }
+
+        .about-me {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .about-me-text {
+            max-width: 600px;
+        }
+
     </style>
 </head>
 <body>
@@ -92,9 +108,12 @@
     <a href="https://www.twitch.tv/KevBaylissArt" class="button button-blue">Watch Me Paint / Play LIVE on Twitch</a>
 </section>
 
-<section>
-    <h2>About Me</h2>
-    <p>I have been an artist in the video game industry since 1987, working on iconic titles and creating characters that have become a part of video game history. I offer commissioned artwork and also sell original works on eBay. Follow my journey on social media and watch me live on Twitch where I create art in real-time.</p>
+<section class="about-me">
+    <img class="profile-img" src="/your-profile-picture.jpg" alt="Kev Bayliss Profile Picture">
+    <div class="about-me-text">
+        <h2>About Me</h2>
+        <p>I have been an artist in the video game industry since 1987, working on iconic titles and creating characters that have become a part of video game history. I offer commissioned artwork and also sell original works on eBay. Follow my journey on social media and watch me live on Twitch where I create art in real-time.</p>
+    </div>
 </section>
 
 <section>
