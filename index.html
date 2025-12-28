@@ -54,7 +54,7 @@
 
         /* Button color classes */
         .button-red {
-            background-color: #ff0000; /* Red for email */
+            background-color: #ff0000; /* Red */
         }
 
         .button-green {
@@ -63,6 +63,10 @@
 
         .button-blue {
             background-color: #0000ff; /* Blue for Twitch */
+        }
+
+        .button-purple {
+            background-color: #6a0dad; /* Purple for Download FAQ */
         }
 
         .button:hover {
@@ -120,6 +124,43 @@
             margin: 0 auto; /* Center the entire section */
         }
 
+        /* Add more space around text */
+        .lead {
+            margin-bottom: 20px;
+        }
+
+        /* Services box */
+        .services-box {
+            max-width: 700px;
+            margin: 20px auto 0 auto;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 18px 18px;
+            text-align: left;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .services-box h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .services-box ul {
+            margin: 10px 0 0 0;
+            padding-left: 22px;
+        }
+
+        .services-box li {
+            margin: 10px 0;
+            line-height: 1.35;
+        }
+
+        .services-note {
+            margin-top: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
         /* Responsive for small screens */
         @media (max-width: 768px) {
             .header-container {
@@ -128,17 +169,17 @@
             }
 
             .profile-img {
+                margin-right: 0;
                 margin-bottom: 15px; /* Add space between the image and text */
             }
 
             h1 {
                 text-align: center; /* Center the title */
             }
-        }
 
-        /* Add more space around text */
-        .lead {
-            margin-bottom: 20px;
+            .services-box {
+                text-align: left;
+            }
         }
 
     </style>
@@ -150,9 +191,9 @@
 </header>
 
 <section>
-    <!-- Email Button with Custom Icon -->
-    <a href="mailto:KevBaylissArt@Outlook.com" class="button button-red">
-        <img src="KevBayliss.github.io/mail icon.png" alt="Email" class="icon"> <strong>EMAIL ME FOR COMMISSIONS</strong>
+    <!-- Download FAQ & Prices Button -->
+    <a href="/Kev_Bayliss_FAQ_and_Pricing_2026_v3.pdf" class="button button-purple" target="_blank" rel="noopener">
+        <strong>DOWNLOAD FAQ &amp; PRICES</strong>
     </a>
 
     <!-- eBay Button with Custom Icon -->
@@ -172,7 +213,7 @@
     <img class="profile-img" src="KevBayliss.github.io/KevBaylissArt_ProfilePic_256.jpg" alt="Kev Bayliss Profile Picture">
 
     <!-- Title -->
-    <h1>Kev Bayliss — Artist & Game Creator</h1>
+    <h1>Kev Bayliss — Artist &amp; Game Creator</h1>
   </div>
 
   <div class="about-me-text">
@@ -189,28 +230,48 @@
     </p>
 
     <p>
-        Today, I continue to create and share my passion for art and character design. My focus is on original paintings, digital artwork, and commissioned pieces. Whether I'm working on a new commission or painting live on Twitch, I’m always eager to share my creative process and the stories behind the characters I’ve helped bring to life.
+        Today, I continue to create and share my passion for art and character design — from original paintings and digital artwork through to commissioned pieces, character design, and more. Whether I'm working on a new commission or painting live on Twitch, I’m always eager to share my creative process and the stories behind the characters I’ve helped bring to life.
     </p>
   </div>
+
+  <!-- SERVICES (Character Design prominent) -->
+  <div class="services-box">
+    <h2>Services I Offer</h2>
+    <ul>
+      <li><strong>Character Design (Primary Service)</strong> — bespoke character creation for creators, studios, writers and personal projects. Character design is a separate category from general art commissions because it involves developing a character identity that may be used commercially. Ownership can be transferred by written agreement, while authorship credit remains clear.</li>
+      <li><strong>Artwork &amp; Illustration Commissions</strong> — original paintings, sketches, digital illustrations, and tattoo designs. These commissions focus on delivering a finished artwork (digital or traditional).</li>
+      <li><strong>Voice Acting &amp; Voice-Over</strong> — available for selected projects. I have provided voice work for games including Diddy Kong Racing (Wizpig, Bubbler), GoldenEye 007 (James Bond), Killer Instinct (various), Star Fox Adventures (Prince Tricky) and more. Recorded with professional audio equipment.</li>
+    </ul>
+    <div class="services-note">
+      For pricing guides, artwork rights, shipping info, and FAQs, please use the <strong>Download FAQ &amp; Prices</strong> button above.
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT ME button placed just above social links -->
+<section>
+    <a href="mailto:kevbaylissart@outlook.com" class="button button-red">
+        <img src="KevBayliss.github.io/mail icon.png" alt="Email" class="icon"> <strong>CONTACT ME</strong>
+    </a>
 </section>
 
 <section>
   <h2>Follow Me on Social Media</h2>
   <div class="social-icons">
     <!-- Twitter Icon -->
-    <a href="https://x.com/Kev_Bayliss" target="_blank" class="icon-btn">
+    <a href="https://x.com/Kev_Bayliss" target="_blank" class="icon-btn" rel="noopener">
       <img src="KevBayliss.github.io/x logo.png" alt="Twitter" class="social-icons">
     </a>
     <!-- Instagram Icon -->
-    <a href="https://www.instagram.com/Kev_Bayliss" target="_blank" class="icon-btn">
+    <a href="https://www.instagram.com/Kev_Bayliss" target="_blank" class="icon-btn" rel="noopener">
       <img src="KevBayliss.github.io/insta logo.png" alt="Instagram" class="social-icons">
     </a>
     <!-- LinkedIn Icon -->
-    <a href="https://www.linkedin.com/in/kevbayliss/" target="_blank" class="icon-btn">
+    <a href="https://www.linkedin.com/in/kevbayliss/" target="_blank" class="icon-btn" rel="noopener">
       <img src="KevBayliss.github.io/linked in logo.png" alt="LinkedIn" class="social-icons">
     </a>
     <!-- BlueSky Icon -->
-    <a href="https://bsky.app/profile/kevbayliss.bsky.social" target="_blank" class="icon-btn">
+    <a href="https://bsky.app/profile/kevbayliss.bsky.social" target="_blank" class="icon-btn" rel="noopener">
       <img src="KevBayliss.github.io/BlueSky Logo.png" alt="BlueSky" class="social-icons">
     </a>
   </div>
