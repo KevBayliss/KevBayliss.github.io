@@ -187,6 +187,157 @@
             }
         }
 
+
+
+
+        
+  /* --- ART WALL / GALLERY SECTION --- */
+  .artwall {
+    margin: 48px auto 0;
+    width: min(1100px, 92vw);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  }
+
+  .artwall__bg {
+    /* Replace this with your own brick texture image path when ready */
+    background:
+      linear-gradient(rgba(10,10,10,0.65), rgba(10,10,10,0.65)),
+      url("/brick-wall-texture.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 34px 22px 28px;
+  }
+
+  .artwall__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .artwall__title {
+    margin: 0;
+    font-size: 1.35rem;
+    letter-spacing: 0.2px;
+    color: #fff;
+  }
+
+  .artwall__subtitle {
+    margin: 6px 0 0;
+    color: rgba(255,255,255,0.82);
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .artwall__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.10);
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.16);
+    transition: transform 120ms ease, background 120ms ease;
+    white-space: nowrap;
+  }
+  .artwall__cta:hover {
+    background: rgba(255,255,255,0.16);
+    transform: translateY(-1px);
+  }
+
+  .artgrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  @media (max-width: 980px) {
+    .artgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    .artgrid { grid-template-columns: 1fr; }
+  }
+
+  .artcard {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  /* Frame + mount */
+  .frame {
+    background: rgba(20,20,20,0.72);
+    border-radius: 16px;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.30);
+    transition: transform 120ms ease;
+  }
+
+  .artcard:hover .frame {
+    transform: translateY(-2px);
+  }
+
+  .mount {
+    background: rgba(255,255,255,0.92);
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .artimg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 9px;
+    background: #fff;
+  }
+
+  .artmeta {
+    margin-top: 10px;
+    padding: 0 2px;
+  }
+
+  .artmeta__title {
+    margin: 0;
+    font-size: 0.98rem;
+    color: #fff;
+    letter-spacing: 0.2px;
+  }
+
+  .artmeta__desc {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.35;
+  }
+
+  .artmeta__tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.82rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.14);
+    color: rgba(255,255,255,0.88);
+  }
+
+
+
+
+
+
+
+
+
+        
     </style>
 </head>
 <body>
@@ -240,6 +391,80 @@
     </p>
   </div>
 
+
+<section class="artwall" aria-label="Artwork gallery">
+  <div class="artwall__bg">
+    <div class="artwall__header">
+      <div>
+        <h2 class="artwall__title">Original Artwork</h2>
+        <p class="artwall__subtitle">
+          A small selection of recent paintings. Click any piece to view availability on eBay.
+        </p>
+      </div>
+
+      <!-- Keep your eBay link EXACT as you prefer -->
+      <a class="artwall__cta" href="https://www.ebay.co.uk/usr/Kev_Bayliss_Art" target="_blank" rel="noopener">
+        View available originals on eBay →
+      </a>
+    </div>
+
+    <div class="artgrid">
+      <!-- CARD 1 -->
+      <a class="artcard" href="https://www.ebay.co.uk/usr/Kev_Bayliss_Art" target="_blank" rel="noopener">
+        <div class="frame">
+          <div class="mount">
+            <img class="artimg" src="/art/thumbs/painting_01.jpg" alt="Painting 1 thumbnail">
+          </div>
+        </div>
+        <div class="artmeta">
+          <p class="artmeta__title">Painting Title (replace)</p>
+          <p class="artmeta__desc">Acrylic on canvas • Size info (optional)</p>
+          <span class="artmeta__tag">Click to view</span>
+        </div>
+      </a>
+
+      <!-- CARD 2 -->
+      <a class="artcard" href="https://www.ebay.co.uk/usr/Kev_Bayliss_Art" target="_blank" rel="noopener">
+        <div class="frame">
+          <div class="mount">
+            <img class="artimg" src="/art/thumbs/painting_02.jpg" alt="Painting 2 thumbnail">
+          </div>
+        </div>
+        <div class="artmeta">
+          <p class="artmeta__title">Painting Title (replace)</p>
+          <p class="artmeta__desc">Acrylic on canvas • Size info (optional)</p>
+          <span class="artmeta__tag">Click to view</span>
+        </div>
+      </a>
+
+      <!-- CARD 3 -->
+      <a class="artcard" href="https://www.ebay.co.uk/usr/Kev_Bayliss_Art" target="_blank" rel="noopener">
+        <div class="frame">
+          <div class="mount">
+            <img class="artimg" src="/art/thumbs/painting_03.jpg" alt="Painting 3 thumbnail">
+          </div>
+        </div>
+        <div class="artmeta">
+          <p class="artmeta__title">Painting Title (replace)</p>
+          <p class="artmeta__desc">Acrylic on canvas • Size info (optional)</p>
+          <span class="artmeta__tag">Click to view</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    
   <!-- SERVICES (short & skimmable) -->
   <div class="services-box">
     <h2>Services I Offer</h2>
