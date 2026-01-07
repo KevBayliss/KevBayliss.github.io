@@ -200,16 +200,15 @@
     box-shadow: 0 10px 28px rgba(0,0,0,0.18);
   }
 
-  .artwall__bg {
-    /* Replace this with your own brick texture image path when ready */
-    background:
-      linear-gradient(rgba(10,10,10,0.65), rgba(10,10,10,0.65)),
-      url("KevBayliss.github.io
-/brick-wall-texture.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 34px 22px 28px;
-  }
+.artwall__bg{
+  background-image:
+    linear-gradient(rgba(10,10,10,0.55), rgba(10,10,10,0.55)),
+    url("/brick-wall-texture.jpg");   /* make sure this exact name matches */
+  background-repeat: no-repeat, repeat;  /* gradient no-repeat, brick repeats */
+  background-size: auto, 1024px 1024px;  /* brick uses its native tile size */
+  background-position: center, top left;
+  padding: 34px 22px 28px;
+}
 
   .artwall__header {
     display: flex;
