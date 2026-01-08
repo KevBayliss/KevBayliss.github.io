@@ -231,6 +231,20 @@
       row-gap: 40px;
     }
 
+    /* Row specifically for the two landscape paintings */
+    .artrow {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 28px;
+      row-gap: 40px;
+      margin-top: 40px;
+    }
+
+    /* Extra grid for the two portrait pieces below */
+    .artgrid--extra {
+      margin-top: 40px;
+    }
+
     .artcard{ display: block; }
 
     .frame{
@@ -264,6 +278,7 @@
     ------------------------------ */
     @media (max-width: 980px) {
       .artgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .artrow { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 560px) {
@@ -330,6 +345,7 @@
             </p>
           </div>
 
+          <!-- First row: original three pieces -->
           <div class="artgrid">
             <div class="artcard">
               <div class="frame">
@@ -355,36 +371,45 @@
               </div>
             </div>
           </div>
-        </div>
-           <div class="artcard">
+
+          <!-- Second row: two landscape paintings side by side -->
+          <div class="artrow">
+            <div class="artcard">
               <div class="frame">
                 <div class="mount">
                   <img class="artimg" src="/RACINGREPTILE.jpg" alt="Original acrylic painting example">
                 </div>
               </div>
             </div>
-   <div class="artcard">
+
+            <div class="artcard">
               <div class="frame">
                 <div class="mount">
                   <img class="artimg" src="/conker.jpg" alt="Original acrylic painting example">
                 </div>
               </div>
             </div>
-   <div class="artcard">
+          </div>
+
+          <!-- Third row: two portrait paintings -->
+          <div class="artgrid artgrid--extra">
+            <div class="artcard">
               <div class="frame">
                 <div class="mount">
                   <img class="artimg" src="/pipsqueak.jpg" alt="Original acrylic painting example">
                 </div>
               </div>
             </div>
-   <div class="artcard">
+
+            <div class="artcard">
               <div class="frame">
                 <div class="mount">
                   <img class="artimg" src="/skydiving.jpg" alt="Original acrylic painting example">
                 </div>
               </div>
             </div>
-
+          </div>
+        </div>
       </section>
 
       <!-- SERVICES -->
